@@ -1,0 +1,81 @@
+.custom-button {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+}
+
+.custom-button:hover {
+    background: #209dd8;
+    color: white;
+}
+
+.custom-card{
+    background: #F3F5FA;
+}
+
+.dataTables_length{
+    display: inline-block;
+}
+#paymentTable_filter{
+    display: inline-block;
+    float: right;
+}
+
+#paymentTable{
+    background: #ffff;
+}
+
+.dataTables_info{
+    display: inline-block;
+}
+
+.dataTables_paginate {
+    display: inline-block;
+    float: right;
+}
+
+.paginate_button {
+    background: #3d4d6a;
+    padding: 3px 8px;
+    border-radius: 9px;
+    color: white;
+    cursor: pointer;
+}
+.dataTables_paginate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dataTables_paginate span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.paginate_button.previous{
+    margin-right: 10px;
+}
+
+.paginate_button.next{
+    margin-left: 10px;
+}
+
+#paymentTable_filter label input{
+    border: #dee2e6 1px solid;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+
+#paymentTable_filter label input:focus{
+    border: #0176ec 1px solid;
+    outline: none;
+}
