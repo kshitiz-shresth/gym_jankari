@@ -139,7 +139,7 @@
             <div class="col-3 mb-4">
                 <div class="card custom-card">
                     <div class="card-body">
-                        <p class="card-text">{{ $paymentDetails->first()->package->title }}</p>
+                        <p class="card-text"><strong><u>Package:</u></strong> {{ $paymentDetails->first()->package->title }}</p>
                     </div>
                     @if(isset($remainingDays))
                         @if($remainingDays<=7)

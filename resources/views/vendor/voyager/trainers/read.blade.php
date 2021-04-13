@@ -54,7 +54,7 @@
                             @if (isset($row->details->view))
                                 @include($row->details->view, ['row' => $row, 'dataType' => $dataType, 'dataTypeContent' => $dataTypeContent, 'content' => $dataTypeContent->{$row->field}, 'action' => 'read', 'view' => 'read', 'options' => $row->details])
                             @elseif($row->type == "image")
-                                <img class="img-responsive"
+                                <img class="img-responsive" style="height: 200px"
                                      src="{{ filter_var($dataTypeContent->{$row->field}, FILTER_VALIDATE_URL) ? $dataTypeContent->{$row->field} : Voyager::image($dataTypeContent->{$row->field}) }}">
                             @elseif($row->type == 'multiple_images')
                                 @if(json_decode($dataTypeContent->{$row->field}))

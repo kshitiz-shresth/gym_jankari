@@ -82,14 +82,19 @@
                                     <input type="hidden" name="{{ $row->field }}" value="{{ $dataTypeContent->{$row->field} }}">
                                     @elseif($row->field=='status')
                                         @if($dataTypeContent->status==1)
-                                        <p>Ongoing</p>
+                                        : Ongoing
                                         @elseif($dataTypeContent->status==0)
-                                        <p>Pending</p>
+                                        : Pending
                                         @else
-                                        <p>Expired</p>
+                                        : Expired
                                         @endif
                                     <input type="hidden" name="{{ $row->field }}" value="{{ $dataTypeContent->{$row->field} }}">
-
+                                    @elseif($row->field=='package_id')
+                                    : {{ \App\Package::find($dataTypeContent->{$row->field})->title  }}
+                                    <input type="hidden" name="{{ $row->field }}" value="{{ $dataTypeContent->{$row->field} }}">
+                                    @elseif($row->field=='duration')
+                                    : {{ $dataTypeContent->{$row->field}  }}
+                                    <input type="hidden" name="{{ $row->field }}" value="{{ $dataTypeContent->{$row->field} }}">
                                     @else
                                         {!! app('voyager')->formField($row, $dataType, $dataTypeContent) !!}
                                     @endif
